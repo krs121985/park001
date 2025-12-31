@@ -9,7 +9,7 @@ public class Test05윤년판정기 {
 		// 100의 배수인 해는 윤년이 아닙니다. 
 		// 400의 배수인 해는 다시 윤년으로 취급합니다.
 		
-		int year = 2000;
+		int year = 2020;
 		
 		int firstLeepCalculator= year % 4;
 		int secondLeepCalculator= year % 100;
