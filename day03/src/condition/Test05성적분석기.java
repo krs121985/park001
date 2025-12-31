@@ -21,7 +21,7 @@ public class Test05성적분석기 {
 	  System.out.print("국어점수:");
 	  int a = sc.nextInt();
 	  System.out.print("영어점수:");
-	  int b = sc.nextInt();
+	  int b = sc.nextInt(); 
 	  System.out.print("수학점수:");
 	  int c = sc.nextInt();
   
