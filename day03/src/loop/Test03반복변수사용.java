@@ -16,5 +16,7 @@ public class Test03반복변수사용 {
 	    		 System.out.println(i);
 	    	 }
 	     }
+	     
 	}   
 }
+
