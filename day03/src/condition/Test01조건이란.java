@@ -3,7 +3,7 @@ package condition;
 public class Test01조건이란 {
 	public static void main(String[] args) {
 		//조건(Condition)부 코드
-		
+		 
 		int number = 7;
 		
 		if(number % 2 == 1){
