@@ -1,6 +1,6 @@
 package day01;
 
-public class Profile {
+public class Profile { 
 	public static void main(String[] args) {
 		System.out.println("황인빈");
 		System.out.println("더조은아카데미");
@@ -9,3 +9,4 @@ public class Profile {
 		System.out.println(3000*200 +"원");//권장하는 방법
 	}
 }
+
