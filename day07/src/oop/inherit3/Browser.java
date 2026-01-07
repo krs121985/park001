@@ -10,7 +10,6 @@ public class Browser {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
 	//메소드
 	public void refresh() {
 		System.out.println("새로고침 기능");
