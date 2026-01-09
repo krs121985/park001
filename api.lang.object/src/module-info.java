@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module api.lang.object {
-}
