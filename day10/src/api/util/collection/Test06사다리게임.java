@@ -1,4 +1,4 @@
-package api.utill.collection;
+package api.util.collection;
 
 import java.util.ArrayList;
 import java.util.Collections;
