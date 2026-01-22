@@ -15,7 +15,7 @@
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
-    <link rel="stylesheet" type="text/css" href="./resources/css/commons.css"> <!--href="/home/resources/css/commons.css"-->
+    <link rel="stylesheet" type="text/css" href="/home/resources/css/commons.css"> <!--href="/home/resources/css/commons.css"-->
     <style>
         
     </style>
@@ -28,7 +28,7 @@
         <div class="cell mt-0 mb-0">
             <div class="flex-box">
                 <div class="w-25 left flex-box flex-center" style="justify-content: flex-start;">
-                    <img src="./resources/images/tjoeun_logo.png" width="200" height="50">
+                    <img src="/home/resources/images/tjoeun_logo.png" width="200" height="50">
                 </div>
                 <div class="w-50 center">
                     <h1>더조은컴퓨터아카데미 종로지점</h1>
@@ -45,11 +45,12 @@
         <!-- 메뉴 -->
         <div class="cell mt-0 mb-0">
             <div class="menu">
-                <a href="#"><i class="fa-solid fa-house"></i>Home</a>
-                <a href="#"><i class="fa-solid fa-book"></i>Lecture</a>
-                <a href="#"><i class="fa-solid fa-list"></i>Board</a>
+            <!-- (중요) 템플릿페이지는 어디서 실행될지 모르므로 경로를 절대경로로 작성해야 한다. -->
+                <a href="/home/"><i class="fa-solid fa-house"></i>Home</a>
+                <a href=""><i class="fa-solid fa-book"></i>Lecture</a>
+                <a href="/home/views/board/list.jsp"><i class="fa-solid fa-list"></i>Board</a>
                 <div class="seperator"></div>
-                <a href="#"><i class="fa-solid fa-user-plus"></i>회원가입</a>
+                <a href="/home/views/member/join.jsp"><i class="fa-solid fa-user-plus"></i>회원가입</a>
                 <a href="#"><i class="fa-solid fa-right-to-bracket"></i>로그인</a>
             </div>
         </div>
