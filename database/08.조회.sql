@@ -1,29 +1,26 @@
--- 정렬(order)
--- 데이터를 원하는 순서대로 배치하는 것
--- (ex) 번호순, 이름순, 최신순, 랭킹순, 포인트순, ...
--- 종류는 오름차순(ascending)과 내림차순(descending)이 존재
--- 조회 결과가 여러개라면 반드시 1가지 이상의 정렬을 해야 한다 (가급적 PK를 선호)
+-- 조회(select)
+-- 데이터베이스 테이블에 존재하는 데이터를 원하는 목표에 맞게 불러오는 것
+-- 구문형식 : select 항목 from 테이블 [조건] [그룹] [정렬];
+-- 대괄호 표시한 부분은 생략 가능함
+-- 등록과 방향이 반대라는것에 유의해야함
 
+-- pokemon 테이블에서 pokemon_name을 조회하세요
+select pokemon_name from pokemon;
 
--- 포켓몬을 번호순으로 정렬하여 조회
-select * from pokemon order by pokemon_no asc;
+-- pokemon 테이블의 모든 항목을 조회하세요
+select pokemon_no, pokemon_name, pokemon_type from pokemon;
+select pokemon.* from pokemon;
+select * from pokemon;
 
--- 포켓몬을 최근 등록순으로 정렬하여 조회
-select * from pokemon order by pokemon_no desc;
+-- pokemon 테이블의 모든 항목과 이름의 글자수를 조회하세요
+select pokemon_no, pokemon_name, pokemon_type, length(pokemon_name) from pokemon;
+select pokemon.*, length(pokemon_name) from pokemon;
+--select *, length(pokemon_name) from pokemon;--불가능
 
--- 포켓몬을 타입별로 정렬
-select * from pokemon order by pokemon_type asc, pokemon_no asc;
+-- (Q) 강좌명과 수강료를 조회하여 출력
+select lecture_subject, lecture_price from lecture;
 
--- (Q) 도서를 페이지수가 많은 순으로 정렬
-select * from book order by book_pagecount desc, book_no asc;
--- (Q) 강좌를 강의시간이 짧은 순으로 정렬
-select * from lecture order by lecture_duration asc, lecture_no asc;
-
--- (Q) 도서를 1page당 가격이 가장 적은 순으로 정렬
---select * from book order by book_price / book_pagecount asc;
-select book.*, book_price / book_pagecount from book 
-order by book_price / book_pagecount asc, book_no asc;
-
--- (Q) 강좌를 시간당 수강료가 가장 저렴한 순으로 정렬
-select lecture.*, lecture_price / lecture_duration from lecture
-order by lecture_price / lecture_duration asc, lecture_no asc;
+-- (Q) 국가에서 지원금이 20만원이 나온다고 가정했을 때, 
+-- 	   수강료에서 실제 본인이 부담하는 비용을 같이 출력
+select lecture_subject, lecture_price, lecture_price - 20000 from lecture;
+select lecture_subject, lecture_price, greatest(lecture_price - 20000, 0) from lecture;
