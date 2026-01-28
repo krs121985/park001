@@ -18,3 +18,9 @@ update book set book_price=book_price*1.1 where book_no=2;
 update lecture set lecture_price=lecture_price - lecture_price/100*20 where lecture_no=4;
 update lecture set lecture_price=lecture_price *0.8 where lecture_no=4;
 
+--(ex) 포켓몬 수정 구문 (PK를 이용해서 나머지 정보를 변경)
+update pokemon set pokemon_name=?, pokemon_type=? where pokemon_no=?;
+--(ex) 도서 정보 수정 구문 (PK를 이용해서 나머지 정보를 변경)
+update book set book_title=?, book_genre=?, book_pagecount=?, book_price=?, book_status=? where book_no=?;
+--(ex) 강의 정보 수정 구문 (PK를 이용해서 나머지 정보를 변경)
+update lecture set lecture_subject=?, lecture_category=?, lecture_duration=?, lecture_price=?, lecture_type=? where lecture_no=?;
