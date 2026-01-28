@@ -6,3 +6,15 @@
 
 --(ex) 1번 몬스터의 이름을 '바보'로 변경
 update pokemon set pokemon_name='바보' where pokemon_no=1;
+
+--(Q) 1번 도서의 이름을 '테스트도서', 장르를 '교양', 가격을 100으로 변경
+update book set book_title='테스트도서', book_genre='교양',book_price=100 where book_no=1;
+
+--(Q) 2번 도서의 가격을 10% 인상
+update book set book_price=book_price+book_price/100*10 where book_no=2;
+update book set book_price=book_price*1.1 where book_no=2;
+
+--(Q) 3번 강의에 대한 수강료를 20% 할인
+update lecture set lecture_price=lecture_price - lecture_price/100*20 where lecture_no=4;
+update lecture set lecture_price=lecture_price *0.8 where lecture_no=4;
+
