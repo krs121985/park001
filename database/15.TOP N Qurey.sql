@@ -15,7 +15,7 @@ SELECT rownum, TMP.* FROM (
 --3. 2번데이터의 결과에서 rownum으로 원하는 구간 검색
 --select * from(2번코드) where rownum between 1 and 10;
 select * from(
-SELECT rownum rn, TMP.* FROM (
-	SELECT * FROM history ORDER BY history_no DESC
-) TMP
+		select rownum rn, TMP.* from (
+			select* from history order by history_no desc
+	) TMP
 ) where rn between 11 and 20;
